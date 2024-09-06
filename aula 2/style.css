@@ -14,17 +14,29 @@ body {
 .box {
     background-color: crimson;
     border: 1px solid #000;
+    border-radius: 5%;
     text-align: center;
     font-size: 24px;
 } 
 .box img {
     height: 100%;
     width: 100%;
+    border-radius: 5%;
 }
-.hidden img {
+button {
+    border: 1px solid #000;
+    border-radius: 35%;
+    width: 100px;
+    height: 30px; 
+}
+.hidden img { 
     display: none;
 }
 .matched {
     width: 101%;
-    box-shadow: 0 0 0 5px green;
+    box-shadow: 0 0 0 3px green;
+}
+button h4 {
+    width: 100%;
+    height: 100%;
 }

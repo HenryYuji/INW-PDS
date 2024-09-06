@@ -7,19 +7,61 @@
 </head>
 <body>
     <link rel="stylesheet" href="style.css">
+    <h1 class="titulo">Jogo Da Memória</h1>
     <div class="container">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">4</div>
-        <div class="box">5</div>
-        <div class="box">6</div>
-        <div class="box">7</div>
-        <div class="box">8</div>
-        <div class="box">9</div>
-        <div class="box">10</div>
-        <div class="box">11</div>
-        <div class="box">12</div>
+        <div class="box" data-value="1"><img src="FALE COMIGO.jpg"></div>
+        <div class="box" data-value="2"><img src="FORREST GUMP.jpg"></div>
+        <div class="box" data-value="3"><img src="CORINGA.jpg"></div>
+        <div class="box" data-value="4"><img src="TREM BALA.jpg"></div>
+        <div class="box" data-value="5"><img src="CORRA.jpg"></div>
+        <div class="box" data-value="5"><img src="CORRA.jpg"></div>
+        <div class="box" data-value="1"><img src="FALE COMIGO.jpg"></div>
+        <div class="box" data-value="6"><img src="BABY DRIVER.jpg"></div>
+        <div class="box" data-value="2"><img src="FORREST GUMP.jpg"></div>
+        <div class="box" data-value="4"><img src="TREM BALA.jpg"></div>
+        <div class="box" data-value="6"><img src="BABY DRIVER.jpg"></div>
+        <div class="box" data-value="3"><img src="CORINGA.jpg"></div>
     </div>
+    <script>
+        let firstCard = null;
+        let secondCard = null;
+        let lock = false;
+ 
+        const boxes = document.querySelectorAll('.box');
+ 
+        boxes.forEach(box => {
+            box.classList.add('hidden');
+            box.addEventListener('click', () => {
+                if (lock || box === firstCard || box.classList.contains('matched')) return;
+ 
+                box.classList.remove('hidden');
+               
+                if (!firstCard) {
+                    firstCard = box;
+                } else {
+                    secondCard = box;
+                    lock = true;
+ 
+                    if (firstCard.dataset.value === secondCard.dataset.value) {
+                        firstCard.classList.add('matched');
+                        secondCard.classList.add('matched');
+                        resetCards();
+                    } else {
+                        setTimeout(() => {
+                            firstCard.classList.add('hidden');
+                            secondCard.classList.add('hidden');
+                            resetCards();
+                        }, 1000);
+                    }
+                }
+            });
+        });
+ 
+        function resetCards() {
+            firstCard = null;
+            secondCard = null;
+            lock = false;
+        }
+    </script>
 </body>
 </html>

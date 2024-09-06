@@ -1,13 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
 .container {
     display: grid;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-rows: repeat(3, 150px);
     gap: 10px;
+    margin: 40px;
 }
 .box {
-    background-color: cadetblue;
+    background-color: crimson;
     border: 1px solid #000;
     text-align: center;
     font-size: 24px;
-    padding: 20px;
+} 
+.box img {
+    height: 100%;
+    width: 100%;
+}
+.hidden img {
+    display: none;
+}
+.matched {
+    width: 101%;
+    box-shadow: 0 0 0 5px green;
 }

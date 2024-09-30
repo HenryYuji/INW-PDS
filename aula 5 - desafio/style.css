@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    color: #242424;
+    background-color: #ffffff;
+}
+.main-header {
+    padding: 20px 0px;
+    color: #ffffff;
+    background-color: #363434;
+}
+.main-nav {
+    float: right;
+}
+.main-nav ul {
+    list-style: none;
+}
+.main-nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.main-nav a {
+    color: #ffffff;
+}
+.main-nav a:hover {
+    color: #34f3f3;
+}
+.container {
+    align-content: center;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.hero {
+    height: 200px;
+    background: url('fundo.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 155px 0;
+    box-shadow: inset 0 0 0 2000px rgba(29, 28, 28, 0.5);
+    animation: scrollImage 10s infinite linear;
+}
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.cta-btn {
+    background-color: #16d1d1;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.cta-btn:hover {
+    background-color: rgb(7, 56, 49);
+    transform: scale(1.1);
+}
+.services {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
+}
+.service-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.services h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.service-item {
+    background-color: #fff4f4;
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 5px 5px 0 35px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-item p {
+    font-size: 1em;
+    color: #353535;
+    line-height: 1.5;
+}
+.service-item h4 {
+    color: rgb(11, 182, 156);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.service-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+.main-footer {
+    background-color: #3b3636;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+@keyframes scrollImage {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
